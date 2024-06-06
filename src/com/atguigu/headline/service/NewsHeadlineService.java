@@ -1,5 +1,6 @@
 package com.atguigu.headline.service;
 
+import com.atguigu.headline.pojo.NewsHeadline;
 import com.atguigu.headline.pojo.vo.HeadlineDetailVo;
 import com.atguigu.headline.pojo.vo.HeadlineQueryVo;
 
@@ -24,4 +25,31 @@ public interface NewsHeadlineService {
      * @return
      */
     HeadlineDetailVo findHeadlineDetail(int hid);
+
+    /**
+     *
+     * @param newsHeadline
+     */
+    int addNewsHeadline(NewsHeadline newsHeadline);
+
+    /**
+     *
+     * @param hid
+     * @return
+     */
+    NewsHeadline findByHid(Integer hid);
+
+    /**
+     *
+     * @param newsHeadline
+     * @return
+     */
+    int update(NewsHeadline newsHeadline);
+
+    /**
+     *
+     * @param hid
+     * @return
+     */
+    int removeByHid(int hid);
 }
